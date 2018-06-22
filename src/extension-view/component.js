@@ -9,7 +9,7 @@ import closeButton from '../img/close_icon.png';
 import { ExtensionComponentView } from '../extension-component-view';
 import { ExtensionMobileView } from '../extension-mobile-view/component';
 
-const { ExtensionAnchor, ExtensionViewType, ExtensionPlatform} = window['extension-coordinator'];
+const { ExtensionViewType, ExtensionPlatform  } = window['extension-coordinator'];
 
 export class ExtensionView extends Component {
   constructor(props) {
@@ -35,7 +35,7 @@ export class ExtensionView extends Component {
   renderView(extensionProps) {
     let view = null;
     switch (this.props.type) {
-      case ExtensionAnchor.Component:
+      case ExtensionViewType.Component:
         view = (<ExtensionComponentView
           id={`component-${this.props.id}`}
           className="view"
@@ -45,7 +45,7 @@ export class ExtensionView extends Component {
           position={this.props.position}
         />);
         break;
-      case ExtensionViewType.Mobile:
+      case ExtensionPlatform.Mobile:
         view = (<ExtensionMobileView
           id={`mobile-${this.props.id}`}
           className="view"
@@ -79,7 +79,7 @@ export class ExtensionView extends Component {
   }
 
   _isEditable() {
-    return this.props.type === ExtensionAnchor.Component || this.props.type === ExtensionPlatform.Mobile;
+    return this.props.type === ExtensionViewType.Component || this.props.type === ExtensionPlatform.Mobile;
   }
 
   render() {
@@ -95,7 +95,7 @@ export class ExtensionView extends Component {
           width: PANEL_VIEW_DIMENSIONS.width,
         }
         break;
-      case ExtensionViewType.Overlay:
+      case ExtensionViewType.VideoOverlay:
         extensionProps.viewStyles = {
           width: this.props.frameSize.width,
           height: this.props.frameSize.height

@@ -2162,7 +2162,7 @@ ShallowWrapper {
           }
     }
     role="Broadcaster"
-    type="video_overlay"
+    type="videoOverlay"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -2193,8 +2193,8 @@ ShallowWrapper {
           className="view"
           style={
                     Object {
-                              "height": "300px",
-                              "width": "320px",
+                              "height": "1px",
+                              "width": "1px",
                             }
           }
 >
@@ -2242,7 +2242,7 @@ ShallowWrapper {
                     }
                     frameId="frameid-0"
                     mode="viewer"
-                    type="video_overlay"
+                    type="videoOverlay"
           />
 </div>,
       ],
@@ -2350,12 +2350,12 @@ ShallowWrapper {
             }
             frameId="frameid-0"
             mode="viewer"
-            type="video_overlay"
+            type="videoOverlay"
 />,
           "className": "view",
           "style": Object {
-            "height": "300px",
-            "width": "320px",
+            "height": "1px",
+            "width": "1px",
           },
         },
         "ref": null,
@@ -2405,7 +2405,7 @@ ShallowWrapper {
             },
             "frameId": "frameid-0",
             "mode": "viewer",
-            "type": "video_overlay",
+            "type": "videoOverlay",
           },
           "ref": null,
           "rendered": null,
@@ -2439,8 +2439,8 @@ ShallowWrapper {
             className="view"
             style={
                         Object {
-                                    "height": "300px",
-                                    "width": "320px",
+                                    "height": "1px",
+                                    "width": "1px",
                                   }
             }
 >
@@ -2488,7 +2488,7 @@ ShallowWrapper {
                         }
                         frameId="frameid-0"
                         mode="viewer"
-                        type="video_overlay"
+                        type="videoOverlay"
             />
 </div>,
         ],
@@ -2596,12 +2596,12 @@ ShallowWrapper {
               }
               frameId="frameid-0"
               mode="viewer"
-              type="video_overlay"
+              type="videoOverlay"
 />,
             "className": "view",
             "style": Object {
-              "height": "300px",
-              "width": "320px",
+              "height": "1px",
+              "width": "1px",
             },
           },
           "ref": null,
@@ -2651,7 +2651,7 @@ ShallowWrapper {
               },
               "frameId": "frameid-0",
               "mode": "viewer",
-              "type": "video_overlay",
+              "type": "videoOverlay",
             },
             "ref": null,
             "rendered": null,
