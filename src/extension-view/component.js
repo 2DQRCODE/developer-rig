@@ -86,19 +86,19 @@ export class ExtensionView extends Component {
     const extensionProps = {}
     let panelHeight = PANEL_VIEW_DIMENSIONS.height;
     if (this.props.extension.views.panel && this.props.extension.views.panel.height) {
-      panelHeight = this.props.extension.views.panel.height;
+      panelHeight = this.props.extension.views.panel.height+'px';
     }
     switch(this.props.type) {
       case ExtensionViewType.Panel:
         extensionProps.viewStyles = {
-          height: panelHeight + 'px',
-          width: PANEL_VIEW_DIMENSIONS.width + 'px',
+          height: panelHeight,
+          width: PANEL_VIEW_DIMENSIONS.width,
         }
         break;
       case ExtensionViewType.Overlay:
         extensionProps.viewStyles = {
-          width: this.props.frameSize.width + 'px',
-          height: this.props.frameSize.height + 'px'
+          width: this.props.frameSize.width,
+          height: this.props.frameSize.height
         };
         break;
       case ExtensionViewType.Config:
@@ -107,8 +107,8 @@ export class ExtensionView extends Component {
         break;
       case ExtensionViewType.LiveConfig:
         extensionProps.viewStyles = {
-          height: panelHeight + 'px',
-          width: PANEL_VIEW_DIMENSIONS.width + 'px',
+          height: panelHeight,
+          width: PANEL_VIEW_DIMENSIONS.width,
         }
         break;
       default:
