@@ -9,7 +9,7 @@ import closeButton from '../img/close_icon.png';
 import { ExtensionComponentView } from '../extension-component-view';
 import { ExtensionMobileView } from '../extension-mobile-view/component';
 
-const { ExtensionAnchor, ExtensionMode, ExtensionViewType, ExtensionPlatform} = window['extension-coordinator'];
+const { ExtensionAnchor, ExtensionViewType, ExtensionPlatform} = window['extension-coordinator'];
 
 export class ExtensionView extends Component {
   constructor(props) {
@@ -89,19 +89,19 @@ export class ExtensionView extends Component {
       panelHeight = this.props.extension.views.panel.height;
     }
     switch(this.props.type) {
-      case ExtensionAnchor.Panel:
+      case ExtensionViewType.Panel:
         extensionProps.viewStyles = {
           height: panelHeight + 'px',
           width: PANEL_VIEW_DIMENSIONS.width + 'px',
         }
         break;
-      case ExtensionAnchor.Overlay:
+      case ExtensionViewType.Overlay:
         extensionProps.viewStyles = {
           width: this.props.frameSize.width + 'px',
           height: this.props.frameSize.height + 'px'
         };
         break;
-      case ExtensionMode.Config:
+      case ExtensionViewType.Config:
         extensionProps.viewStyles = CONFIG_VIEW_DIMENSIONS;
         extensionProps.viewWrapperStyles = CONFIG_VIEW_WRAPPER_DIMENSIONS;
         break;
